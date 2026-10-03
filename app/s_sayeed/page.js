@@ -1,4 +1,27 @@
-"use client"
+export const metadata = {
+  title: "Sumaiya Saeed - Watch Latest Videos",
+  description: "Check out the latest video collection of Sumaiya Saeed.",
+  openGraph: {
+    title: "Sumaiya Saeed - Watch Latest Videos",
+    description: "Check out the latest video collection of Sumaiya Saeed.",
+    url: "https://peaceporn.netlify.app/s_sayeed", // আপনার পেজের লাইভ লিঙ্ক
+    type: "website",
+    images: [
+      {
+        url: "https://tse2.mm.bing.net/th/id/OIP.zwoXcArYIRbvnvML_HzqCgHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3",
+        width: 1200,
+        height: 630,
+        alt: "Sumaiya Saeed Profile Image",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sumaiya Saeed - Watch Latest Videos",
+    description: "Check out the latest video collection of Sumaiya Saeed.",
+    images: ["https://tse2.mm.bing.net/th/id/OIP.zwoXcArYIRbvnvML_HzqCgHaJQ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"],
+  },
+}
 
 export default function SYEED() {
   return (
@@ -34,8 +57,7 @@ export default function SYEED() {
           />
         </div>
 
-
-<div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-800 bg-black">
+        <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-800 bg-black">
           <iframe 
             src="https://playmogo.com/e/lalunvsffhva" 
             className="w-full h-full border-0"
@@ -55,7 +77,7 @@ export default function SYEED() {
           />
         </div>
 
-          <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-800 bg-black">
+        <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-lg border border-gray-800 bg-black">
           <iframe 
             src="https://playmogo.com/e/gr0zk4xo06ll" 
             className="w-full h-full border-0"
