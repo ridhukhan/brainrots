@@ -2,36 +2,10 @@
 
 
 
-import { useState } from "react"
 
 
 
 export default function SYEED(){
-
-const Ads="https://auctionr.org/4/bdd91fddd6fb80fc988d5762f7a9a74d"
-
-
-
-const [AdsLinks1,setAdsLinks1]=useState(false)
-
-const adsOpen=(e)=>{
-
-    if(!AdsLinks1){
-
-    e.preventDefault()
-
-
-
-window.open(Ads,"_blank")
-  setAdsLinks1(true)
-
-
-    }
-
-
-
-
-}
 
 
 
@@ -59,17 +33,21 @@ alt="sumaiya-saeed"/>
 
 </div>
 
-<div>
+<div className="flex flex-col gap-4 m-2 ">
 
-<div onClick={adsOpen}>
+<div >
 
-   <iframe width="600" height="480" src="https://playmogo.com/e/1bn600u5vy9x" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+   <iframe width="full" height="300" src="https://playmogo.com/e/1bn600u5vy9x" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
 
 
 </div>
 
 
+<div>
 
+    <iframe width="full" height="300" src="https://playmogo.com/e/q4oo66qlc4zr" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+
+</div>
 
 
 </div>
