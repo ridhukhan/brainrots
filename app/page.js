@@ -61,6 +61,10 @@ image:imageUrl
 
     if(res.ok){
       alert("sucess uploading")
+
+      setName("")
+      setBiboron("")
+      setPrice(0)
       setShow(false)
     }
   }
