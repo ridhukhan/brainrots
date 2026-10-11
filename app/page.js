@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { CgAddR } from "react-icons/cg";
 import { ImCross } from "react-icons/im";
+import ProductList from "./components/productList";
 export default function Home() {
 
 
@@ -89,7 +90,10 @@ setLoading(false)
 
   </div>
 </div>
-
+<hr/>
+<div>
+  <ProductList/>
+</div>
 {show && <div  className="bg-pink-500 mx-6 rounded-3xl overflow-scroll max-h-120 min-h-60 justify-center w-300px h-auto z-[1000] border border-2 border-solid border-black">
 
 <ImCross  className="justify-center ml-80 z-[1000] fixed text-black-600 font-bold text-2xl" onClick={cross}/>
