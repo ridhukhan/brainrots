@@ -12,7 +12,7 @@ const [name,setName]=useState("")
 const [biboron,setBiboron]=useState("")
 const [price,setPrice]=useState(0)
 const [image, setImage] = useState(null);
-
+const [loading,setLoading]=useState(false)
   const popUp = (e)=>{
     e.preventDefault()
     setShow(true)
@@ -45,6 +45,7 @@ const [image, setImage] = useState(null);
 
   const handleSubmite = async (e)=>{
     e.preventDefault()
+    setLoading(true)
     const imageUrl = await uploadToCloudinary(image);
     const data={
   name,
@@ -61,7 +62,7 @@ image:imageUrl
 
     if(res.ok){
       alert("sucess uploading")
-
+setLoading(false)
       setName("")
       setBiboron("")
       setPrice(0)
@@ -73,7 +74,7 @@ image:imageUrl
 
 <nav className="justify-center text-center p-5">
 
-<h className="font-bold text-3xl">samir store</h>
+<h1 className="font-bold text-3xl">samir store</h1>
 </nav>
 <hr/>
 <div className="flex text-4xl justify-center gap-33">
@@ -89,11 +90,11 @@ image:imageUrl
   </div>
 </div>
 
-{show && <div  className="bg-pink-500 mx-6  overflow-scroll max-h-120 min-h-60 justify-center w-300px h-auto z-[1000] border border-2 border-solid border-black">
+{show && <div  className="bg-pink-500 mx-6 rounded-3xl overflow-scroll max-h-120 min-h-60 justify-center w-300px h-auto z-[1000] border border-2 border-solid border-black">
 
-<ImCross  className="justify-center ml-55 z-[1000] fixed text-red-600 font-bold text-2xl" onClick={cross}/>
+<ImCross  className="justify-center ml-80 z-[1000] fixed text-black-600 font-bold text-2xl" onClick={cross}/>
 
-<form  className="mt-20 ml-10 flex flex-col gap-5 w-100"
+<form  className="mt-20  flex flex-col gap-5 w-full justify-center"
 onSubmit={handleSubmite}
 >
 
@@ -106,10 +107,10 @@ onChange={(e)=>setName(e.target.value)}
 className="p-5 bg-yellow-600 rounded-2xl justify-center"/>
 <label className="font-bold"> প্রোডাক্ট এর বিবরণ লিখুনঃ</label>
 
-<input type="text"
+<textarea type="text"
 value={biboron}
 onChange={(e)=>setBiboron(e.target.value)}
-className="p-5 bg-yellow-600 rounded-2xl justify-center"/>
+className="pt-10 whitespace-pre-line font-bold text-center bg-yellow-600 rounded-2xl justify-center"/>
 <label className="font-bold"> প্রোডাক্ট এর দাম লিখুনঃ</label>
 
 <input type="number"
@@ -126,7 +127,7 @@ onChange={(e) => setImage(e.target.files[0])}
 
 <button 
 type="submit"
-className="bg-red-700 p-4 mx-35 rounded">upload</button>
+className="bg-red-700 p-4 mx-35 rounded" disabled={loading}>{loading?"....":"upload"}</button>
 </form>
 
 
